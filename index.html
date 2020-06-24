@@ -1,0 +1,392 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- ======================================================================= -->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  div {
+    max-width: 95%;
+    margin:auto;
+    padding: 10px;
+  }
+
+  .table-like {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    max-width: 1100px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+</style>
+<!-- ======================================================================= -->
+
+<!-- Start : Google Analytics Code -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64069893-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64069893-4');
+</script> -->
+<!-- End : Google Analytics Code -->
+
+<script type="text/javascript" src="resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+<div max-width=100%>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/png" href="resources/seal_icon.png">
+  <title>Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://orybkin.github.io/" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:site_name" content="Goal-Conditioned Prediction and Planning" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors" />
+  <meta property="og:description" content="Pertsch, Rybkin, Ebert, Finn, Jayaraman, Levine. Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors. 2020." />
+  <meta property="og:url" content="https://orybkin.github.io/" />
+  <meta property="og:image" content="https://orybkin.github.io/video-gcp/resources/teaser.jpg" />
+  <meta property="og:video" content="https://www.youtube.com/v/axXx-x86IeY" />
+
+  <meta property="article:publisher" content="https://orybkin.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors" />
+  <meta name="twitter:description" content="Pertsch, Rybkin, Ebert, Finn, Jayaraman, Levine. Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors. 2020." />
+  <meta name="twitter:url" content="https://orybkin.github.io/" />
+  <meta name="twitter:image" content="https://orybkin.github.io/video-gcp/resources/teaser.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="https://orybkin.github.io/video-gcp/resources/teaser.jpg" />
+  <meta name="twitter:player" content="https://www.youtube.com/embed/axXx-x86IeY?rel=0&showinfo=0" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+</head>
+
+<body>
+
+      <br>
+      <center><span style="font-size:44px;font-weight:bold;">Long-Horizon Visual Planning <br/> with Goal-Conditioned Hierarchical Predictors</span></center><br/>
+      <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;">
+          <div><center><span style="font-size:18px"><a href="https://kpertsch.github.io/" target="_blank">Karl Pertsch*</a></span></center>
+          <center><span style="font-size:18px">USC</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://www.seas.upenn.edu/~oleh/" target="_blank">Oleh Rybkin*</a></span></center>
+          <center><span style="font-size:18px">UPenn</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://febert.github.io/" target="_blank">Frederik Ebert</a></span></center>
+          <center><span style="font-size:18px">UC Berkeley</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="http://people.eecs.berkeley.edu/~cbfinn/" target="_blank">Chelsea Finn</a></span></center>
+          <center><span style="font-size:18px">Stanford</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://www.seas.upenn.edu/~dineshj/" target="_blank">Dinesh Jayaraman</a></span></center>
+          <center><span style="font-size:18px">UPenn</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://people.eecs.berkeley.edu/~svlevine/" target="_blank">Sergey Levine</a></span></center>
+          <center><span style="font-size:18px">UC Berkeley</span></center>
+          </div>
+      </div>
+      <table align=center width=30% style="padding-top:0px;padding-bottom:0px">
+          <tr>
+            <td align=center><center><span style="font-size:15px">* equal contribution</span></center></td>
+          <tr/>
+      </table>
+
+      <div class="table-like" style="justify-content:space-evenly;max-width:700px;margin:auto;padding:5px">
+        <div><center><span style="font-size:28px"><a href="https://arxiv.org/pdf/2006.13205.pdf">[Paper]</a></span></center></div>
+        <div><center><span style="font-size:28px"><a href='https://github.com/orybkin/video-gcp'>[GitHub Code]</a></span></center> </div>
+      </div>
+
+      <center>
+      <iframe width="768" height="432" max-width="100%" src="https://www.youtube.com/embed/axXx-x86IeY?autoplay=1&loop=1&playlist=axXx-x86IeY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+      <!-- <iframe width="768" height="432" max-width="100%" src="resources/video.m4v" frameborder="0" allowfullscreen></iframe></center> -->
+      <br>
+
+      <div style="width:800px; margin:0 auto; text-align=right;">
+        The ability to predict and plan into the future is fundamental for agents acting in the world. To reach a faraway goal, we predict trajectories at multiple timescales, first devising a coarse plan towards the goal and then gradually filling in details. In contrast, current learning approaches for visual prediction and planning fail on long-horizon tasks as they generate predictions (1) without considering goal information, and (2) at the finest temporal resolution, one step at a time. In this work we propose a framework for visual prediction and planning that is able to overcome both of these limitations. First, we formulate the problem of predicting towards a goal and propose the corresponding class of latent space goal-conditioned predictors (GCPs). GCPs significantly improve planning efficiency by constraining the search space to only those trajectories that reach the goal. Further, we show how GCPs can be naturally formulated as hierarchical models that, given two observations, predict an observation between them, and by recursively subdividing each part of the trajectory generate complete sequences. This divide-and-conquer strategy is effective at long-term prediction, and enables us to design an effective hierarchical planning algorithm that optimizes trajectories in a coarse-to-fine manner. We show that by using both goal-conditioning and hierarchical prediction, GCPs enable us to solve visual planning tasks with much longer horizon than previously possible.
+      </div>
+      <br><hr>
+
+      <center><h1>Goal-Conditioned Hierarchical Prediction and Plannning</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=right">
+        Our agent performs visual planning by leveraging a goal-conditioned hierarchical model. At each step, a layer of the hierarchy is optimized in parallel, and finer and finer plans are produced with each layer.
+      </div>
+      <center><a href="resources/teaser.mp4"><video src = "resources/teaser.mp4" width="1000px" autoplay muted loop></video></a><br></center>
+      <hr>
+
+      <div style="width:800px; margin:0 auto; text-align=center">
+        <center><h1>Overview of the Algorithm</h1></center>
+      </div>
+      <div style="width:800px; margin:0 auto; text-align=right">
+        We propose a novel hierarchical goal-conditioned predictive model, as well as a hierarchical planning algorithm. The predictive model (left) is goal-conditioned, so it only predicts trajectories that reach the goal. It is also hierarchical, which allows it to scale to long horizons of more than 500 time steps. In order to plan, we optimize over a trajectory of latent states (center). The planning algorithm is recursive, and proceeds by iteratively subdividing the trajectory to be optimized. In each step, it optimizes a single subgoal in between two subgoals that are already planned. In order to execute the plan, we use an online inverse model (right) that takes in the current obseration and produces the action to reach the next latent state in the plan.
+      </div>
+      <br/>
+          <center><a href="resources/method.png"><img src = "resources/method.png" width="1000px"></img></a><br></center>
+      <br/><hr>
+
+      <!-- Prediction results  -->
+      <center id="sourceCode"><h1>Prediction Results</h1></center>
+      <div style="font-size:25px;padding:0px"><center>Reconstructions</center></div>
+      <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px">
+        <div style="width:150px">
+          <center><h3> Method </h3></center>
+          <!-- These are actually 50px including padding -->
+          <div style="height:30px"> Ground Truth </div>
+          <div style="height:30px"> GCP-tree </div>
+          <div style="height:30px"> GCP-sequential </div>
+          <div style="height:30px"> DVF (Liu'17) </div>
+          <div style="height:30px"> CIGAN (Wang'19)  </div>
+        </div>
+
+        <div>
+          <center><h3> 9 rooms </h3></center>
+          <a href="resources/results/9room_rec.gif"><img src="resources/results/9room_rec.gif" width="200px" style="padding:0px"></img></a>
+        </div>
+
+        <div>
+          <center><h3> 25 rooms </h3></center>
+          <a href="resources/results/25room_rec.gif"><img src="resources/results/25room_rec.gif" width="200px"></img></a>
+        </div>
+
+        <div>
+          <center><h3> Pick&Place </h3></center>
+          <a href="resources/results/sawyer_rec.gif"><img src="resources/results/sawyer_rec.gif" width="200px"></img></a>
+        </div>
+
+        <div>
+          <center><h3> Human 3.6M </h3></center>
+          <!-- <a href="resources/results/h36_rec.gif"><img src="resources/results/h36_rec.gif" width="200px"></img></a> -->
+          <a href="resources/results/h36_rec.mp4"><video src="resources/results/h36_rec.mp4" width="200px" autoplay muted loop></video></a>
+        </div>
+      </div>
+
+      <div style="font-size:25px;padding:20px"><center>Samples</center></div>
+      <div class="table-like" style="justify-content:space-evenly;max-width:1100px;margin:auto;padding:0px">
+        <div style="width:150px">
+          <div style="height:30px"> GCP-tree </div>
+          <div style="height:30px"> GCP-tree </div>
+          <div style="height:30px"> GCP-sequential </div>
+          <div style="height:30px"> GCP-sequential </div>
+        </div>
+
+        <div><a href="resources/results/9room_samples.gif"><img src="resources/results/9room_samples.gif" width="200px"></img></a></div>
+
+        <div><a href="resources/results/25room_samples.gif"><img src="resources/results/25room_samples.gif" width="200px"></img></a></div>
+
+        <div><a href="resources/results/sawyer_samples.gif"><img src="resources/results/sawyer_samples.gif" width="200px"></img></a></div>
+
+        <!-- <div><a href="resources/results/h36_samples.gif"><img src="resources/results/h36_samples.gif" width="200px"></img></a></div> -->
+        <div><a href="resources/results/h36_samples.mp4"><video src="resources/results/h36_samples.mp4" width="200px" autoplay muted loop></video></a></div>
+      </div>
+      <div style="width:800px; margin:0 auto; text-align=right">
+        Our method is able to perform goal-conditioned prediction even over long-horizons, such as the 25-room data (200 frames) or Human 3.6M data (500 frames). Prior work based on pixel interpolation (DVF) or latent interpolation (CIGAN) fails to scale to such long horizons. Moreover, we show that our method is able to generate multiple plausible samples for the same start and goal, which is crucial to perform effective trajectory optimization for planning.
+      </div></br><hr>
+
+      <center id="planningResults"><h1>Planning Results</h1></center>
+      <br/>
+          <center><a href="resources/imgPlan_exec.jpg"><img src = "resources/imgPlan_exec.jpg" width="1000px"></img></a><br></center>
+          <div style="width:800px; margin:0 auto; text-align=right">
+        Conventional visual model-predictive control approaches (left) struggle to plan paths to long-horizon goals due to an exponential increase in the number of trajectories that need to be searched over. In contrast, we show that our planning approach based on goal-conditioned predictors (GCPs) can reliably reach goals that are hundreds of steps away (middle). By combining GCPs with the hierarchical planning approach described above, we are able to plan more efficiently, allowing the agent to reach long-horizon goals faster (right).
+      </div>
+      <br/><hr>
+
+      <center id="sourceCode"><h1>Source Code</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=right">
+      We have released our implementation in PyTorch on the github page. Try our code!
+      </div>
+      <div class="table-like">
+        <span style="font-size:28px"><a href='https://github.com/orybkin/video-gcp'>[GitHub]</a></span>
+      </div>
+      <br><hr>
+
+      <table align=center width=850px>
+        <center><h1>Paper and Bibtex</h1></center>
+        <tr>
+        <td width=250px align=left>
+        <!-- <p style="margin-top:4px;"></p> -->
+        <a href="https://arxiv.org/pdf/2006.13205.pdf"><img style="height:150px" src="resources/thumbnail.png"/></a>
+        <center>
+        <span style="font-size:20pt"><a href="https://arxiv.org/pdf/2006.13205.pdf">[Paper]</a>
+        <span style="font-size:20pt"><a href="https://arxiv.org/abs/2006.13205">[ArXiv]</a>
+        <!-- <span style="font-size:20pt"><a href="resources/slides.pdf">[Slides]</a></span>
+        <span style="font-size:20pt"><a href="resources/poster.pdf">[Poster]</a></span> -->
+        </center>
+        </td>
+        <td width=50px align=center>
+        </td>
+        <td width=550px align=left>
+        <!-- <p style="margin-top:4px;"></p> -->
+        <p style="text-align:left;"><b><span style="font-size:20pt">Citation</span></b><br/><span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt">Karl Pertsch, Oleh Rybkin, Frederik Ebert, Chelsea Finn, Dinesh Jayaraman, Sergey Levine. <b>Long-Horizon Visual Planning with Goal-Conditioned Hierarchical Predictors.<br/></b></span></p>
+        <!-- <p style="margin-top:20px;"></p> -->
+        <span style="font-size:20pt"><a shape="rect" href="javascript:togglebib('gcp2020_bib')" class="togglebib">[Bibtex]</a></span>
+        </td>
+        </tr>
+        <tr>
+        <td width=250px align=left>
+        </td>
+        <td width=50px align=center>
+        </td>
+        <td width=550px align=left>
+          <div class="paper" id="gcp2020_bib">
+<pre xml:space="preserve">
+@misc{pertch2020long,
+    title={Long-Horizon Visual Planning
+    with Goal-Conditioned Hierarchical Predictors},
+    author={Karl Pertsch and Oleh Rybkin
+    and Frederik Ebert and Chelsea Finn
+    and Dinesh Jayaraman and Sergey Levine},
+    year={2020},
+}</pre>
+          </div>
+          </td>
+          </tr>
+      </table>
+    <br><hr>
+
+
+      <!-- <div style="width:800px; margin:0 auto; text-align=center">
+        <br>
+        <center>Code and full paper to be released soon.</center>
+      </div> -->
+      </table>
+
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</div>
+</body>
+</html>
