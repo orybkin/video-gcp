@@ -7,5 +7,4 @@ configuration.metric_pruning_scheme = 'pruned_dtw'
 model_config = AttrDict(base_conf.model_config)
 model_config.update({
     'matching_type': 'balanced',
-    'forced_attention': True,
 })

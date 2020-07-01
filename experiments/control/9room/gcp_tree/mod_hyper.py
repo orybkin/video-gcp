@@ -1,12 +1,12 @@
 import os.path
 
 from blox import AttrDict
-from gcp.infra.agent.benchmarking_agent import BenchmarkAgent
-from gcp.infra.envs.miniworld_env.multiroom3d.multiroom3d_env import TopdownMultiroom3dEnv
-from gcp.planning.cem_policy.cem_policy import ImageCEMPolicy
-from gcp.planning.cem_policy.utils.sampler import ImageSequentialHierarchicalSampler
-from gcp.planning.cem_policy.utils.cem_planner import HierarchicalImageCEMPlanner
-from gcp.planning.cem_policy.utils.cost_fcn import ImageLearnedCostEstimate
+from gcp.planning.infra.agent.benchmarking_agent import BenchmarkAgent
+from gcp.planning.infra.envs.miniworld_env.multiroom3d.multiroom3d_env import TopdownMultiroom3dEnv
+from gcp.planning.planner_policy import ImageCEMPolicy
+from gcp.planning.cem.sampler import ImageHierarchicalTreeCEMSampler
+from gcp.planning.cem.cem_planner import HierarchicalImageCEMPlanner
+from gcp.planning.cem.cost_fcn import ImageLearnedCostEstimate
 
 from experiments.prediction.base_configs import gcp_tree as base_conf
 
@@ -61,7 +61,7 @@ cem_params = AttrDict(
     n_iters=3,
     batch_size=10,
     n_level_hierarchy=7,
-    sampler=ImageSequentialHierarchicalSampler,
+    sampler=ImageHierarchicalTreeCEMSampler,
     sampling_rates_per_layer=[10, 10],
     cost_fcn=ImageLearnedCostEstimate,
     cost_config=AttrDict(

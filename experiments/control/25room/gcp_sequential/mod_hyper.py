@@ -1,12 +1,12 @@
 import os.path
 
 from blox import AttrDict
-from gcp.infra.agent.benchmarking_agent import BenchmarkAgent
-from gcp.infra.envs.miniworld_env.multiroom3d.multiroom3d_env import Multiroom3dEnv, TopdownMultiroom3dEnv
-from gcp.planning.cem_policy.cem_policy import ImageCEMPolicy
-from gcp.planning.cem_policy.utils.sampler import SimpleHierarchicalCEMSampler
-from gcp.planning.cem_policy.utils.cost_fcn import ImageWrappedLearnedCostFcn
-from gcp.planning.cem_policy.utils.cem_planner import HierarchicalImageCEMPlanner
+from gcp.planning.infra.agent.benchmarking_agent import BenchmarkAgent
+from gcp.planning.infra.envs.miniworld_env.multiroom3d.multiroom3d_env import TopdownMultiroom3dEnv
+from gcp.planning.planner_policy import ImageCEMPolicy
+from gcp.planning.cem.sampler import SimpleTreeCEMSampler
+from gcp.planning.cem.cost_fcn import ImageWrappedLearnedCostFcn
+from gcp.planning.cem.cem_planner import HierarchicalImageCEMPlanner
 
 from experiments.prediction.base_configs import gcp_tree as base_conf
 
@@ -63,7 +63,7 @@ cem_params = AttrDict(
     batch_size=5,
     elite_frac=1.0,
     n_level_hierarchy=8,
-    sampler=SimpleHierarchicalCEMSampler,
+    sampler=SimpleTreeCEMSampler,
     cost_fcn=ImageWrappedLearnedCostFcn,
     cost_config=AttrDict(
         checkpt_path=os.environ['GCP_EXP_DIR'] + '/prediction/25room/gcp_tree/weights'

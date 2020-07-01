@@ -1,9 +1,8 @@
-import imp
 import os
 
 from blox import AttrDict
 from gcp.datasets.data_loader import MazeTopRenderedGlobalSplitVarLenVideoDataset
-from gcp.planning.cem_policy.utils.cost_fcn import EuclideanPathLength
+from gcp.planning.cem.cost_fcn import EuclideanPathLength
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
 from experiments.prediction.base_configs import gcp_sequential as base_conf
@@ -43,14 +42,3 @@ model_config.update({
     'decoder_distribution': 'discrete_logistic_mixture',
 })
 model_config.pop("add_weighted_pixel_copy")
-
-
-## Dataset
-data_config = AttrDict()
-data_config.dataset_spec = AttrDict()
-data_config.dataset_spec.max_seq_len = 200
-
-data_config.dataset_spec.dataset_class = MazeTopRenderedGlobalSplitVarLenVideoDataset
-data_config.n_rooms = configuration['n_rooms']
-data_config.crop_window = 40
-data_config.dataset_spec.split = AttrDict(train=0.994, val=0.006, test=0.00)

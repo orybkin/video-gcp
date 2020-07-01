@@ -1,11 +1,9 @@
-from gcp.models.svg import SVGModel
-from gcp.rec_planner_utils.logger import HierarchyLogger
+from gcp.prediction.models.sequential import SequentialModel
+from gcp.prediction.utils.logger import HierarchyLogger
 
 configuration = {
-    'model': SVGModel,
-    'model_test': SVGModel,
+    'model': SequentialModel,
     'logger': HierarchyLogger,
-    'logger_test': HierarchyLogger,
 }
 
 model_config = {

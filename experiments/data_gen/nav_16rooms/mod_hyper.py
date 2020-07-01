@@ -1,9 +1,9 @@
 import os.path
 
 from blox import AttrDict
-from gcp.infra.agent.general_agent import GeneralAgent
-from gcp.infra.envs.miniworld_env.multiroom3d.multiroom3d_env import TopdownMultiroom3dEnv
-from gcp.infra.policy.prm_policy.prm_policy import PrmPolicy
+from gcp.planning.infra.agent.general_agent import GeneralAgent
+from gcp.planning.infra.envs.miniworld_env.multiroom3d.multiroom3d_env import TopdownMultiroom3dEnv
+from gcp.planning.infra.policy.prm_policy.prm_policy import PrmPolicy
 
 BASE_DIR = '/'.join(str.split(__file__, '/')[:-1])
 current_dir = os.path.dirname(os.path.realpath(__file__))
