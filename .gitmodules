@@ -1,0 +1,6 @@
+[submodule "blox"]
+	path = blox
+	url = git@github.com:orybkin/blox-nn.git
+[submodule "gym-miniworld"]
+	path = gym-miniworld
+	url = git@github.com:kpertsch/gym-miniworld
