@@ -8,7 +8,7 @@ imageio==2.1.2
 matplotlib==2.2.2
 moviepy==0.2.3.2
 numpy==1.18.4
-opencv-python==3.4.2.17
+opencv-python==4.2.0.32
 Pillow==6.0.0
 pyglet==1.2.4
 scikit-image==0.15.0
